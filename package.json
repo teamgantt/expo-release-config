@@ -1,0 +1,26 @@
+{
+  "name": "expo-release-config",
+  "version": "0.0.1",
+  "description": "Simple Expo release configuration tools.",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/teamgantt/expo-release-config.git"
+  },
+  "keywords": [
+    "expo",
+    "react",
+    "native",
+    "circleci",
+    "ci"
+  ],
+  "author": "Brad Bumbalough <bradley.bumbalough@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/teamgantt/expo-release-config/issues"
+  },
+  "homepage": "https://github.com/teamgantt/expo-release-config#readme"
+}
