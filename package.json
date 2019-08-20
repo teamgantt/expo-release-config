@@ -35,10 +35,12 @@
     "node": "10.16.3"
   },
   "bin": {
-    "expo-release": "./bin/expo-release.js"
+    "expo-release": "./bin/expo-release.js",
+    "expo-beta": "./bin/expo-beta.js"
   },
   "dependencies": {
     "deepmerge": "^4.0.0",
-    "yargs": "^14.0.0"
+    "yargs": "^14.0.0",
+    "yargs-unparser": "^1.5.0"
   }
 }

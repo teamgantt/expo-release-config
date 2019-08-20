@@ -51,7 +51,7 @@ expo install expo-release-config
 
 ## Usage
 
-### `bump [type=patch] [--no-commit=false] [--config=app-config.json]`
+### `expo-release bump [type=patch] [--no-commit=false] [--config=app-config.json]`
 Bumps the version file and updates the Expo app configuration, committing by default.
 
 | Options | Default | Description |
@@ -64,7 +64,7 @@ Bumps the version file and updates the Expo app configuration, committing by def
 npx expo-release bump minor --no-commit --config=my-app.json
 ```
 
-### `config:beta [--config=app-config.json]`
+### `expo-release config:beta [--config=app-config.json]`
 Generates the beta Expo app configuration file.
 
 | Options | Default | Description |
@@ -97,6 +97,18 @@ Example `app-config.json` file for beta overrides:
 }
 ```
 
+### `expo-beta [command] [--config=app-config.json]`
+Proxies the `expo-cli` command with your beta configuration.
+
+| Options | Default | Description |
+| -- | -- | --|
+| `--config` | `app-config.json` | Location of your Expo app config file. Note -- this is not your beta configuration file, but your main expo configuration file.|
+
+You must first generate your beta configuration file before running this command.
+
+```bash
+npx expo-beta publish
+```
 
 ## Todo
 
