@@ -1,4 +1,5 @@
 # Expo Release Config
+[![CircleCI](https://circleci.com/gh/teamgantt/expo-release-config/tree/develop.svg?style=svg)](https://circleci.com/gh/teamgantt/expo-release-config/tree/develop)
 
 > Simple Expo release configuration tools.
 
