@@ -31,7 +31,7 @@ Here is a simple breakdown of the release environment.
 expo install expo-release-config
 ```
 
-2. Create a `version.json` file in your app root directoy to track your current released version.
+2. Create a `version.json` file in your app root directory to track your current released version.
 
 ```json
 {
@@ -42,26 +42,59 @@ expo install expo-release-config
 }
 ```
 
-| Name    | Description                                                                                                                                      |
-| ------- | ------------------------------------------------------------------------------------------------------------------------------------------------ |
-| `major` | The major released version.                                                                                                                      |
-| `minor` | The minor released version. Major + Minor version (ie `1.2`) will comprise the released standalone app version.                                  |
-| `patch` | The patch version. Will be incremented when publishing a new (over the air) update of your app.                                                  |
+| Name | Description |
+| -- | -- |
+| `major` | The major released version. |
+| `minor` | The minor released version. Major + Minor version (ie `1.2`) will comprise the released standalone app version. |
+| `patch` | The patch version. Will be incremented when publishing a new (over the air) update of your app. |
 | `build` | The build number to specify `versionCode` (Android) and `buildNumber` (iOS). To simplify configuration the same number will be used for both OS. |
 
 ## Usage
 
 ### `bump [type=patch] [--no-commit=false] [--config=app-config.json]`
-Bumps the version file and updates the Expo app configuration, commiting by default.
+Bumps the version file and updates the Expo app configuration, committing by default.
 
 | Options | Default | Description |
 | -- | -- | --|
 | `type` | `patch` | One of `major`, `minor`, `patch`, `build`.
-| `--no-commit` | false |Wheter to commit the changed version files. Only commits `version.json` and your Expo app config.
+| `--no-commit` | false | Whether to commit the changed version files. Only commits `version.json` and your Expo app config.
 | `--config` | `app-config.json` | Location of your Expo app config file.
 
 ```bash
 npx expo-release bump minor --no-commit --config=my-app.json
+```
+
+### `config:beta [--config=app-config.json]`
+Generates the beta Expo app configuration file.
+
+| Options | Default | Description |
+| -- | -- | --|
+| `--config` | `app-config.json` | Location of your Expo app config file. |
+
+This will deep merge attributes nested in the `beta: {}` object of your app configuration file into the `expo: {}` attribute and save as a new file to be used when generating a beta release.
+
+```bash
+npx expo-release config:beta --config=my-app.json
+```
+
+Example `app-config.json` file for beta overrides:
+
+```json
+{
+  "expo": {
+    "name": "My App",
+    "slug": "my-app",
+    "ios": {
+      "bundleIdentifier": "com.myapp"
+    }
+  },
+  "beta": {
+    "slug": "my-app-beta",
+    "ios": {
+      "bundleIdentifier": "com.myapp.beta"  
+    }
+  }
+}
 ```
 
 

@@ -38,6 +38,7 @@
     "expo-release": "./bin/expo-release.js"
   },
   "dependencies": {
+    "deepmerge": "^4.0.0",
     "yargs": "^14.0.0"
   }
 }

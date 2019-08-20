@@ -2,6 +2,7 @@
 'use strict';
 
 const {bump} = require('../lib/version');
+const {beta} = require('../lib/config');
 
 require('yargs')
   .command(
@@ -24,6 +25,19 @@ require('yargs')
     },
     async argv => {
       await bump(argv);
+    }
+  )
+  .command(
+    'config:beta [--config]',
+    'Generate the beta expo configuration file.',
+    yargs => {
+      yargs.positional('config', {
+        default: 'app-config.json',
+        describe: 'Location of your expo app configuration file',
+      });
+    },
+    async argv => {
+      await beta(argv);
     }
   )
   .help().argv;
