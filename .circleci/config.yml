@@ -1,0 +1,43 @@
+version: 2.1
+
+executors:
+    docker_node:
+      working_directory: ~/expo-release-config
+      docker:
+        - image: circleci/node:10.16.3
+
+commands: 
+  npm_install:
+    description: "Install node modules"
+    steps:
+      - restore_cache:
+          keys:
+            - v1-dependencies-{{ checksum "package-lock.json" }}
+            - v1-dependencies-
+      - run: npm install
+      - save_cache:
+          paths:
+            - node_modules
+          key: v1-dependencies-{{ checksum "package-lock.json" }}
+
+jobs:
+  lint:
+    executor: docker_node
+    steps:
+      - checkout
+      - npm_install
+      - run: npm run lint
+      - run: npm run prettier
+  test:
+    executor: docker_node
+    steps:
+      - checkout
+      - npm_install
+      - run: npm run test
+
+workflows:
+  version: 2.1
+  lint_test:
+      jobs:
+          - lint
+          - test
