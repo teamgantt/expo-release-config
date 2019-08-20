@@ -51,6 +51,20 @@ expo install expo-release-config
 
 ## Usage
 
+### `bump [type=patch] [--no-commit=false] [--config=app-config.json]`
+Bumps the version file and updates the Expo app configuration, commiting by default.
+
+| Options | Default | Description |
+| -- | -- | --|
+| `type` | `patch` | One of `major`, `minor`, `patch`, `build`.
+| `--no-commit` | false |Wheter to commit the changed version files. Only commits `version.json` and your Expo app config.
+| `--config` | `app-config.json` | Location of your Expo app config file.
+
+```bash
+npx expo-release bump minor --no-commit --config=my-app.json
+```
+
+
 ## Todo
 
 - [ ] Publish app `default` with changes to `$PROD` branch.
