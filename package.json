@@ -4,7 +4,7 @@
   "description": "Simple Expo release configuration tools.",
   "main": "index.js",
   "scripts": {
-    "test": "test",
+    "test": "jest",
     "lint": "eslint './lib/**'",
     "prettier": "prettier --check '*/*.js'",
     "prettier:fix": "prettier --write '*/*.js'"
@@ -28,6 +28,7 @@
   "homepage": "https://github.com/teamgantt/expo-release-config#readme",
   "devDependencies": {
     "eslint": "^6.2.0",
+    "jest": "^24.9.0",
     "prettier": "^1.18.2"
   },
   "engines": {
