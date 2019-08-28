@@ -4,5 +4,6 @@
   "jsxBracketSameLine": false,
   "trailingComma": "es5",
   "parser": "babel",
-  "printWidth": 80
+  "printWidth": 80,
+  "endOfLine": "lf"
 }

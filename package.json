@@ -6,7 +6,6 @@
   "scripts": {
     "test": "jest",
     "lint": "eslint './lib/**'",
-    "prettier": "prettier --check '*/*.js'",
     "prettier:fix": "prettier --write '*/*.js'"
   },
   "repository": {
@@ -28,6 +27,9 @@
   "homepage": "https://github.com/teamgantt/expo-release-config#readme",
   "devDependencies": {
     "eslint": "^6.2.0",
+    "eslint-config-prettier": "^6.1.0",
+    "eslint-plugin-jest": "^22.15.2",
+    "eslint-plugin-prettier": "^3.1.0",
     "jest": "^24.9.0",
     "prettier": "^1.18.2"
   },
