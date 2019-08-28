@@ -1,0 +1,18 @@
+version: 2.1
+
+jobs:
+  lint-test:
+    working_directory: ~/expo-release-config
+    docker:
+      - image: circleci/node:10.16.3
+    steps:
+      - checkout
+      - run: npm ci
+      - run: npm run lint
+      - run: npm run test
+
+workflows:
+  version: 2.1
+  lint_test:
+      jobs:
+          - lint-test

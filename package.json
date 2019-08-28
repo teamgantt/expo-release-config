@@ -1,0 +1,47 @@
+{
+  "name": "expo-release-config",
+  "version": "0.0.1",
+  "description": "Simple Expo release configuration tools.",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest",
+    "lint": "eslint './lib/**'",
+    "prettier:fix": "prettier --write '*/*.js'"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/teamgantt/expo-release-config.git"
+  },
+  "keywords": [
+    "expo",
+    "react",
+    "native",
+    "circleci",
+    "ci"
+  ],
+  "author": "Brad Bumbalough <bradley.bumbalough@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/teamgantt/expo-release-config/issues"
+  },
+  "homepage": "https://github.com/teamgantt/expo-release-config#readme",
+  "devDependencies": {
+    "eslint": "^6.2.0",
+    "eslint-config-prettier": "^6.1.0",
+    "eslint-plugin-jest": "^22.15.2",
+    "eslint-plugin-prettier": "^3.1.0",
+    "jest": "^24.9.0",
+    "prettier": "^1.18.2"
+  },
+  "engines": {
+    "node": "10.16.3"
+  },
+  "bin": {
+    "expo-config": "./bin/expo-config.js"
+  },
+  "dependencies": {
+    "deepmerge": "^4.0.0",
+    "yargs": "^14.0.0",
+    "yargs-unparser": "^1.5.0"
+  }
+}
