@@ -34,7 +34,7 @@
     "prettier": "^1.18.2"
   },
   "engines": {
-    "node": "10.16.3"
+    "node": ">=10.16.0"
   },
   "bin": {
     "expo-config": "./bin/expo-config.js"
