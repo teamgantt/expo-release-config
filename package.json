@@ -43,5 +43,8 @@
     "deepmerge": "^4.0.0",
     "yargs": "^14.0.0",
     "yargs-unparser": "^1.6.0"
+  },
+  "volta": {
+    "node": "16.19.1"
   }
 }
